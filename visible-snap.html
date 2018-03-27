@@ -1,0 +1,40 @@
+<style>
+#scroller {
+  position: absolute;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  width: 600px;
+  height: 600px;
+}
+.snap {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+  scroll-snap-align: start;
+}
+.black {
+  background-color: black;
+  left: 700px;
+}
+.blue {
+  background-color: blue;
+  left: 0px;
+}
+#space{
+  position: absolute;
+  width: 3000px;
+  height: 3000px;
+}
+</style>
+<div id="scroller">
+  <div id="space"></div>
+  <div class="snap blue" style="op: 0px;"></div>
+  <div class="snap black" style="top: 200px;"></div>
+  <div class="snap blue" style="top: 500px;"></div>
+  <div class="snap black" style="top: 700px;"></div>
+  <div class="snap blue" style="top: 1000px;"></div>
+  <div class="snap black" style="top: 1200px;"></div>
+  <div class="snap blue" style="top: 1500px;"></div>
+  <div class="snap black" style="top: 1700px;"></div>
+</div>
