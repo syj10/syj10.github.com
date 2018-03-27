@@ -1,0 +1,83 @@
+<style>
+.scroller {
+  position: absolute;
+  top: 100px;
+  overflow: scroll;
+  width: 600px;
+  height: 600px;
+  border: 5px solid black;
+  scroll-snap-type: both mandatory;
+}
+.snap {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: lightblue;
+  scroll-snap-align: start;
+  font-size: 40pt;
+  text-align: center;
+}
+.space{
+  position: absolute;
+  width: 3000px;
+  height: 3000px;
+}
+.text {
+  position: absolute;
+  width: 600px;
+}
+
+</style>
+<div style="position: absolute; top: 20px; left: 20px">
+<div class="text">
+  With "scroll-snap-type: both mandatory", the scroller should always snap to
+  a visible element that has snap position defined on it.
+</div>
+<div class="scroller">
+  <div class="space"></div>
+  <div class="snap" style="left: 500px; top: 500px;">1</div>
+  <div class="snap" style="left: 1000px; top: 500px;">2</div>
+  <div class="snap" style="left: 1500px; top: 500px;">3</div>
+  <div class="snap" style="left: 500px; top: 1000px;">4</div>
+  <div class="snap" style="left: 1000px; top: 1000px;">5</div>
+  <div class="snap" style="left: 1500px; top: 1000px;">6</div>
+  <div class="snap" style="left: 500px; top: 1500px;">7</div>
+  <div class="snap" style="left: 1000px; top: 1500px;">8</div>
+  <div class="snap" style="left: 1500px; top: 1500px;">9</div>
+</div>
+</div>
+
+<div style="position: absolute; top: 820px; left: 20px">
+<div class="text">
+  With "scroll-snap-type: both proximity", the scroller can only snap to an
+  element if its snap position is close to the current position.
+</div>
+<div class="scroller" style="scroll-snap-type: both proximity;">
+  <div class="space"></div>
+  <div class="snap" style="left: 500px; top: 500px;">1</div>
+  <div class="snap" style="left: 1000px; top: 500px;">2</div>
+  <div class="snap" style="left: 1500px; top: 500px;">3</div>
+  <div class="snap" style="left: 500px; top: 1000px;">4</div>
+  <div class="snap" style="left: 1000px; top: 1000px;">5</div>
+  <div class="snap" style="left: 1500px; top: 1000px;">6</div>
+  <div class="snap" style="left: 500px; top: 1500px;">7</div>
+  <div class="snap" style="left: 1000px; top: 1500px;">8</div>
+  <div class="snap" style="left: 1500px; top: 1500px;">9</div>
+</div>
+</div>
+
+<div style="position: absolute; top: 1620px; left: 20px">
+<div class="text">
+  Scroll vertically and make sure the gray squares at right are not visible. Then the
+  gray squares shouldn't affect snapping to the blue squares.
+</div>
+<div class="scroller">
+  <div class="space"></div>
+  <div class="snap" style="left: 100px; top: 200px;">1</div>
+  <div class="snap" style="left: 800px; top: 400px; background-color: gray">A</div>
+  <div class="snap" style="left: 100px; top: 700px;">2</div>
+  <div class="snap" style="left: 800px; top: 900px; background-color: gray">B</div>
+  <div class="snap" style="left: 100px; top: 1200px;">3</div>
+  <div class="snap" style="left: 800px; top: 1400px; background-color: gray">C</div>
+</div>
+</div>
