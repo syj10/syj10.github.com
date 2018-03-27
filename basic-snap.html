@@ -1,0 +1,39 @@
+<style>
+#scroller {
+  position: absolute;
+  overflow: scroll;
+  scroll-snap-type: mandatory;
+  width: 600px;
+  height: 600px;
+}
+.snap {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+  scroll-snap-align: start;
+}
+#space{
+  position: absolute;
+  width: 3000px;
+  height: 3000px;
+}
+</style>
+<div id="scroller">
+  <div id="space"></div>
+  <div class="snap" style="left: 0px; top: 0px;"></div>
+  <div class="snap" style="left: 500px; top: 0px;"></div>
+  <div class="snap" style="left: 1000px; top: 0px;"></div>
+  <div class="snap" style="left: 1500px; top: 0px;"></div>
+  <div class="snap" style="left: 0px; top: 500px;"></div>
+  <div class="snap" style="left: 500px; top: 500px;"></div>
+  <div class="snap" style="left: 1000px; top: 500px;"></div>
+  <div class="snap" style="left: 1500px; top: 500px;"></div>
+  <div class="snap" style="left: 0px; top: 1000px;"></div>
+  <div class="snap" style="left: 500px; top: 1000px;"></div>
+  <div class="snap" style="left: 1000px; top: 1000px;"></div>
+  <div class="snap" style="left: 1500px; top: 1000px;"></div>
+  <div class="snap" style="left: 500px; top: 1500px;"></div>
+  <div class="snap" style="left: 1000px; top: 1500px;"></div>
+  <div class="snap" style="left: 1500px; top: 1500px;"></div>
+</div>
