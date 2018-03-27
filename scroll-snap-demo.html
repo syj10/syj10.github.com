@@ -8,12 +8,31 @@
   border: 5px solid black;
   scroll-snap-type: both mandatory;
 }
+.scroller-old {
+  position: absolute;
+  top: 100px;
+  overflow: scroll;
+  width: 600px;
+  height: 600px;
+  border: 5px solid black;
+  scroll-snap-type: mandatory;
+  scroll-snap-destination: 50% 50%;
+}
 .snap {
   position: absolute;
   width: 400px;
   height: 400px;
   background-color: lightblue;
   scroll-snap-align: start;
+  font-size: 40pt;
+  text-align: center;
+}
+.snap-old {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: lightblue;
+  scroll-snap-coordinate: 50% 50%;
   font-size: 40pt;
   text-align: center;
 }
@@ -79,5 +98,23 @@
   <div class="snap" style="left: 800px; top: 900px; background-color: gray">B</div>
   <div class="snap" style="left: 100px; top: 1200px;">3</div>
   <div class="snap" style="left: 800px; top: 1400px; background-color: gray">C</div>
+</div>
+</div>
+
+<div style="position: absolute; top: 2420px; left: 20px">
+<div class="text">
+  This is written in the old-spec. Only Firefox supports it now.
+</div>
+<div class="scroller-old">
+  <div class="space"></div>
+  <div class="snap-old" style="left: 500px; top: 500px;">1</div>
+  <div class="snap-old" style="left: 1000px; top: 500px;">2</div>
+  <div class="snap-old" style="left: 1500px; top: 500px;">3</div>
+  <div class="snap-old" style="left: 500px; top: 1000px;">4</div>
+  <div class="snap-old" style="left: 1000px; top: 1000px;">5</div>
+  <div class="snap-old" style="left: 1500px; top: 1000px;">6</div>
+  <div class="snap-old" style="left: 500px; top: 1500px;">7</div>
+  <div class="snap-old" style="left: 1000px; top: 1500px;">8</div>
+  <div class="snap-old" style="left: 1500px; top: 1500px;">9</div>
 </div>
 </div>
