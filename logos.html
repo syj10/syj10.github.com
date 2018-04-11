@@ -1,0 +1,118 @@
+<style>
+div {
+  position: absolute;
+}
+img {
+  position: absolute;
+}
+.scroller {
+  top: 100px;
+  overflow: auto;
+  width: 600px;
+  height: 600px;
+  border: 5px solid black;
+  scroll-snap-type: both mandatory;
+}
+.snap {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  scroll-snap-align: start;
+  font-size: 40pt;
+  text-align: center;
+  border: 2px solid black;
+}
+.space{
+  width: 3000px;
+  height: 500px;
+  background-color: lightblue;
+}
+.text {
+  position: absolute;
+  width: 600px;
+}
+.vertical-space{
+  width: 500px;
+  height: 3000px;
+  background-color: lightblue;
+}
+</style>
+
+<div style="top: 20px; left: 20px">
+<div class="scroller">
+  <div class="space"></div>
+  <img class="snap" src="chrome.png" style="left: 20px; top: 20px;">
+  <img class="snap" src="chromium.png" style="left: 520px; top: 20px;">
+  <img class="snap" src="firefox.png" style="left: 1020px; top: 20px;">
+  <img class="snap" src="safari.jpg" style="left: 1520px; top: 20px;">
+  <img class="snap" src="IE.png" style="left: 2020px; top: 20px;">
+</div>
+</div>
+
+<div style="top: 1020px; left: 20px">
+<div class="scroller">
+  <div class="space"></div>
+  <img class="snap" src="chrome.png" style="left: 20px; top: 20px; scroll-snap-align: center">
+  <img class="snap" src="chromium.png" style="left: 520px; top: 20px; scroll-snap-align: center">
+  <img class="snap" src="firefox.png" style="left: 1020px; top: 20px; scroll-snap-align: center">
+  <img class="snap" src="safari.jpg" style="left: 1520px; top: 20px; scroll-snap-align: center">
+  <img class="snap" src="IE.png" style="left: 2020px; top: 20px; scroll-snap-align: center">
+</div>
+</div>
+
+<div style="top: 2020px; left: 20px">
+<div class="scroller">
+  <div class="space"></div>
+  <img class="snap" src="chrome.png" style="left: 20px; top: 20px; scroll-snap-align: end">
+  <img class="snap" src="chromium.png" style="left: 520px; top: 20px; scroll-snap-align: end">
+  <img class="snap" src="firefox.png" style="left: 1020px; top: 20px; scroll-snap-align: end">
+  <img class="snap" src="safari.jpg" style="left: 1520px; top: 20px; scroll-snap-align: end">
+  <img class="snap" src="IE.png" style="left: 2020px; top: 20px; scroll-snap-align: end">
+</div>
+</div>
+
+<div style="top: 3020px; left: 20px">
+<div class="scroller" style="scroll-snap-type: y mandatory">
+  <div class="vertical-space"></div>
+  <img class="snap" src="chrome.png" style="left: 20px; top: 20px;">
+  <img class="snap" src="chromium.png" style="left: 20px; top: 520px;">
+  <img class="snap" src="firefox.png" style="left: 20px; top: 1020px;">
+  <img class="snap" src="safari.jpg" style="left: 20px; top: 1520px;">
+  <img class="snap" src="IE.png" style="left: 20px; top: 2020px;">
+</div>
+</div>
+
+<div style="top: 4020px; left: 20px">
+<div class="scroller" style="scroll-snap-type: y proximity">
+  <div class="vertical-space"></div>
+  <img class="snap" src="chrome.png" style="left: 20px; top: 20px;">
+  <img class="snap" src="chromium.png" style="left: 20px; top: 520px;">
+  <img class="snap" src="firefox.png" style="left: 20px; top: 1020px;">
+  <img class="snap" src="safari.jpg" style="left: 20px; top: 1520px;">
+  <img class="snap" src="IE.png" style="left: 20px; top: 2020px;">
+</div>
+</div>
+
+<div style="top: 5020px; left: 20px">
+<div class="scroller" style="scroll-snap-type: y mandatory; scroll-padding: 10px">
+  <div class="vertical-space"></div>
+  <img class="snap" src="chrome.png" style="left: 20px; top: 20px;">
+  <img class="snap" src="chromium.png" style="left: 20px; top: 520px;">
+  <img class="snap" src="firefox.png" style="left: 20px; top: 1020px;">
+  <img class="snap" src="safari.jpg" style="left: 20px; top: 1520px;">
+  <img class="snap" src="IE.png" style="left: 20px; top: 2020px;">
+</div>
+</div>
+
+<div style="top: 6020px; left: 20px">
+<div class="scroller" style="scroll-snap-type: y mandatory">
+  <div class="vertical-space"></div>
+  <img class="snap" src="chrome.png" style="left: 20px; top: 20px;">
+  <img class="snap" src="chromium.png" style="left: 20px; top: 520px; scroll-margin: 20px;">
+  <img class="snap" src="firefox.png" style="left: 20px; top: 1020px;">
+  <img class="snap" src="safari.jpg" style="left: 20px; top: 1520px;">
+  <img class="snap" src="IE.png" style="left: 20px; top: 2020px;">
+</div>
+</div>
+
+<div style="top: 7020px; left: 20px; width: 200px; height: 1000px">
