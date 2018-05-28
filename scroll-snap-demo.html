@@ -103,6 +103,26 @@
 
 <div style="position: absolute; top: 2420px; left: 20px">
 <div class="text">
+  With "scroll-snap-type: both mandatory", the scroller should always snap to
+  a visible element that has snap position defined on it.
+</div>
+<div class="scroller">
+  <div class="space"></div>
+  <div class="snap" style="width: 1000px; left: 500px; top: 500px;">1</div>
+  <div class="snap" style="width: 1000px; left: 1700px; top: 500px;">2</div>
+  <div class="snap" style="width: 1000px; left: 2900px; top: 500px;">3</div>
+  <div class="snap" style="width: 1000px; left: 500px; top: 1000px;">4</div>
+  <div class="snap" style="width: 1000px; left: 1700px; top: 1000px;">5</div>
+  <div class="snap" style="width: 1000px; left: 2900px; top: 1000px;">6</div>
+  <div class="snap" style="width: 1000px; left: 500px; top: 1500px;">7</div>
+  <div class="snap" style="width: 1000px; left: 1700px; top: 1500px;">8</div>
+  <div class="snap" style="width: 1000px; left: 2900px; top: 1500px;">9</div>
+</div>
+</div>
+
+
+<div style="position: absolute; top: 3220px; left: 20px">
+<div class="text">
   This is written in the old-spec. Only Firefox supports it now.
 </div>
 <div class="scroller-old">
